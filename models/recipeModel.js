@@ -25,7 +25,8 @@ const recipeSchema = new mongoose.Schema(
     coverImage: {
       type: String,
       required: true,
-      default: "https://example.com/default-image.jpg", // Replace with your default image URL
+      default:
+        "https://res.cloudinary.com/dpd55e6mf/image/upload/v1740282857/pulihora_tn87kg.jpg", // Replace with your default image URL
       validate: {
         validator: function (v) {
           return /^(http|https):\/\/.+\.(jpg|jpeg|png|gif)$/.test(v);

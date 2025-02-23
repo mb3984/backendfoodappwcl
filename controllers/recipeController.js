@@ -8,7 +8,7 @@ const createRecipe = async (req, res) => {
     const { title, ingredients, instructions, time, coverImage, createdBy } =
       req.body;
 
-    if (!title || !ingredients || !instructions || !coverImage) {
+    if (!title || !ingredients || !instructions) {
       console.log("⚠️ Missing required fields");
       return res.status(400).json({ message: "Missing required fields" });
     }
