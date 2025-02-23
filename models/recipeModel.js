@@ -25,6 +25,7 @@ const recipeSchema = new mongoose.Schema(
     coverImage: {
       type: String,
       required: true,
+      default: "https://example.com/default-image.jpg", // Replace with your default image URL
       validate: {
         validator: function (v) {
           return /^(http|https):\/\/.+\.(jpg|jpeg|png|gif)$/.test(v);
