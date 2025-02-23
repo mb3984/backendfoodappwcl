@@ -1,37 +1,33 @@
 const mongoose = require("mongoose");
 
-const recipeSchema = new mongoose.Schema(
-  {
-    title: {
-      type: String,
-      required: true,
-      trim: true, // Removes extra spaces
-      index: true,
-    },
-    ingredients: {
-      type: Array, // Ensures it's an array of strings
-      required: true,
-    },
-    instructions: {
-      type: String,
-      required: true,
-      trim: true, // Removes unnecessary spaces
-    },
-    time: {
-      type: Number, // Stores time in minutes
-      min: 1,
-      required: true,
-    },
-    coverImage: {
-      type: String,
-      required: true,
-    },
-    createdBy: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
-    },
+const recipeSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true,
   },
-  { timestamps: true } // Automatically adds createdAt and updatedAt
-);
+  ingredients: {
+    type: [String],
+    required: true,
+  },
+  instructions: {
+    type: String,
+    required: true,
+  },
+  time: {
+    type: Number,
+    required: true,
+  },
+  imageUrl: {
+    // Changed coverImage to imageUrl
+    type: String,
+    default: "", // Optional field
+  },
+  createdBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    // No longer required
+  },
+});
 
-module.exports = mongoose.model("Recipe", recipeSchema);
+const Recipe = mongoose.model("Recipe", recipeSchema);
+module.exports = Recipe;

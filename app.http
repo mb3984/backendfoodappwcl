@@ -15,7 +15,7 @@ Content-Type: application/json
 }
 ###
 POST http://localhost:4000/recipes/post
-Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1QGdtYWlsLmNvbSIsImlkIjoiNjdiYTg0YzliMjNiODBjYTczYmI5YTkxIiwiaWF0IjoxNzQwMjk5MTc1LCJleHAiOjE3NDAzMDI3NzV9.y9JNgyoJDmFnPfzw1SJSQ-5Okz_ONIkD6NAs7dXI2jk
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1QGdtYWlsLmNvbSIsImlkIjoiNjdiYTg0YzliMjNiODBjYTczYmI5YTkxIiwiaWF0IjoxNzQwMzAwNzIyLCJleHAiOjE3NDAzMDQzMjJ9.qeJMGVUrAwlAob9O6orLyxtjoXmvjlv3KJj0adHgtmY
 Content-Type: application/json
 
 {
@@ -23,7 +23,7 @@ Content-Type: application/json
     "ingredients":["chicken", "powder", "salt"],
     "instructions":"do it good",
     "time":20,
-    "coverImage":"https://res.cloudinary.com/dpd55e6mf/image/upload/v1740277710/biryani_uh8zbh.jpg"
+    "imageUrl":"https://res.cloudinary.com/dpd55e6mf/image/upload/v1740277710/biryani_uh8zbh.jpg"
 }
 ###
 POST http://localhost:4000/recipes/post
@@ -35,12 +35,12 @@ Content-Type: application/json
     "ingredients":["chicken", "powder", "salt"],
     "instructions":"do it good",
     "time":20,
-    "coverImage":"https://res.cloudinary.com/dpd55e6mf/image/upload/v1740277710/biryani_uh8zbh.jpg"
+    "imageUrl":"https://res.cloudinary.com/dpd55e6mf/image/upload/v1740277710/biryani_uh8zbh.jpg"
 }
 ###
 GET http://localhost:4000/recipes/getAll
 ###
-PUT http://localhost:4000/recipes/update/67badd331c3952c93ada7000
+PUT http://localhost:4000/recipes/update/67bae1ffb82a03f750e19815
 Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1QGdtYWlsLmNvbSIsImlkIjoiNjdiYTg0YzliMjNiODBjYTczYmI5YTkxIiwiaWF0IjoxNzQwMjk5MTc1LCJleHAiOjE3NDAzMDI3NzV9.y9JNgyoJDmFnPfzw1SJSQ-5Okz_ONIkD6NAs7dXI2jk
 Content-Type: application/json
 
@@ -51,7 +51,7 @@ Content-Type: application/json
 
 }
 ###
-GET http://localhost:4000/recipes/get/67badd331c3952c93ada7000
+GET http://localhost:4000/recipes/get/67bae1ffb82a03f750e19815
 ###
 DELETE http://localhost:4000/recipes/delete/67ba865848078272d539c6c8
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1QGdtYWlsLmNvbSIsImlkIjoiNjdiYTg0YzliMjNiODBjYTczYmI5YTkxIiwiaWF0IjoxNzQwMjc2OTkxLCJleHAiOjE3NDAyODA1OTF9.VwIvi02eOoGudnyLpytbLBbfnRbqQfE8RDRSNvfCCDA

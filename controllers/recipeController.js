@@ -4,10 +4,11 @@ const createRecipe = async (req, res) => {
   try {
     console.log("📝 Request Body:", req.body);
 
-    const { title, ingredients, instructions, time, coverImage, createdBy } =
+    const { title, ingredients, instructions, time, imageUrl, createdBy } =
       req.body;
 
-    if (!title || !ingredients || !instructions || !coverImage) {
+    // Validation for required fields (excluding createdBy)
+    if (!title || !ingredients || !instructions || !imageUrl) {
       console.log("⚠️ Missing required fields");
       return res.status(400).json({ message: "Missing required fields" });
     }
@@ -17,9 +18,10 @@ const createRecipe = async (req, res) => {
       ingredients,
       instructions,
       time,
-      coverImage,
-      createdBy,
+      imageUrl, // Changed from coverImage to imageUrl
+      createdBy, // Optional field
     });
+
     const savedRecipe = await newRecipe.save();
 
     console.log("✅ Recipe created successfully:", savedRecipe);
