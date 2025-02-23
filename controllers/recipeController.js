@@ -2,13 +2,12 @@ const Recipe = require("../models/recipeModel");
 
 const createRecipe = async (req, res) => {
   try {
-    console.log(`🔥 [CREATE] Request received: ${req.method} ${req.url}`);
     console.log("📝 Request Body:", req.body);
 
     const { title, ingredients, instructions, time, coverImage, createdBy } =
       req.body;
 
-    if (!title || !ingredients || !instructions) {
+    if (!title || !ingredients || !instructions || !coverImage) {
       console.log("⚠️ Missing required fields");
       return res.status(400).json({ message: "Missing required fields" });
     }
@@ -33,7 +32,7 @@ const createRecipe = async (req, res) => {
 
 const getAllRecipes = async (req, res) => {
   try {
-    console.log(`📜 [GET ALL] Request received: ${req.method} ${req.url}`);
+    console.log(`📜 [GET ALL] Request received: ${req.method} `);
 
     const recipes = await Recipe.find().populate("createdBy", "name email");
 

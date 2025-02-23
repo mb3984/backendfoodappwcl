@@ -24,14 +24,7 @@ const recipeSchema = new mongoose.Schema(
     },
     coverImage: {
       type: String,
-      default:
-        "https://res.cloudinary.com/dpd55e6mf/image/upload/v1740282857/pulihora_tn87kg.jpg", // Replace with your default image URL
-      validate: {
-        validator: function (v) {
-          return /^(http|https):\/\/.+\.(jpg|jpeg|png|gif)$/.test(v);
-        },
-        message: (props) => `${props.value} is not a valid image URL!`,
-      },
+      required: true,
     },
     createdBy: {
       type: mongoose.Schema.Types.ObjectId,
