@@ -1,4 +1,4 @@
-POST http://localhost:4000/user/signUp
+POST http://localhost:4000/User/SignUp
 Content-Type: application/json
 
 {
@@ -6,7 +6,7 @@ Content-Type: application/json
     "password":"madhu12"
 }
 ###
-POST http://localhost:4000/user/login
+POST http://localhost:4000/User/Login
 Content-Type: application/json
 
 {

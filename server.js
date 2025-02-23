@@ -33,7 +33,7 @@ app.use(express.json()); // Built-in middleware to parse JSON
 app.use(express.urlencoded({ extended: true }));
 
 // Register API Routes
-app.use("/recipes", recipeRoutes);
+app.use("/recipe", recipeRoutes);
 app.use("/user", userRoutes);
 
 // Root Route

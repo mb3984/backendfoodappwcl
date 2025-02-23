@@ -8,10 +8,10 @@ const {
 const verifyToken = require("../middleware/auth"); // Import authentication middleware
 
 // 📌 Authentication Routes
-router.post("/signUp", userSignUp); // User Registration
-router.post("/login", userLogin); // User Login
+router.post("/SignUp", userSignUp); // User Registration
+router.post("/Login", userLogin); // User Login
 
 // 🔒 Protected Route (Requires Authentication)
-router.get("/user/:id", verifyToken, getUser); // Get User Details
+router.get("/User/:id", verifyToken, getUser); // Get User Details
 
 module.exports = router;
