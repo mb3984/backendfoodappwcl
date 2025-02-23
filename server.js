@@ -38,7 +38,7 @@ app.use("/user", userRoutes);
 
 // Root Route
 app.get("/", (req, res) => {
-  res.send("Welcome to the backend food recipe app");
+  res.send("Welcome to the backend food recipe App");
 });
 
 // Start Server
