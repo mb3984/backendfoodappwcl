@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const recipesSchema = new mongoose.Schema({
+const recipeSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
@@ -18,16 +18,15 @@ const recipesSchema = new mongoose.Schema({
     required: true,
   },
   imageUrl: {
-    // Changed coverImage to imageUrl
     type: String,
-    default: "", // Optional field
+    required: true,
   },
   createdBy: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
-    // No longer required
+    ref: "userData", // Assuming you have a User model
+    // required: true,
   },
 });
 
-const FoodRecipe = mongoose.model("FoodRecipes", recipesSchema);
+const FoodRecipe = mongoose.model("FoodRecipe", recipeSchema);
 module.exports = FoodRecipe;
