@@ -15,7 +15,7 @@ Content-Type: application/json
 }
 ###
 POST http://localhost:4000/recipes/post
-Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1QGdtYWlsLmNvbSIsImlkIjoiNjdiYTg0YzliMjNiODBjYTczYmI5YTkxIiwiaWF0IjoxNzQwMzAwNzIyLCJleHAiOjE3NDAzMDQzMjJ9.qeJMGVUrAwlAob9O6orLyxtjoXmvjlv3KJj0adHgtmY
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1QGdtYWlsLmNvbSIsImlkIjoiNjdiYWU3M2IyNGJjZmY3ZDU2ZGFkNDVmIiwiaWF0IjoxNzQwMzAyMjcwLCJleHAiOjE3NDAzMDU4NzB9.gHO4r6V1e7JaG1Ls5LcdEcjuKI7N9loCtnIY5fg71SU
 Content-Type: application/json
 
 {
@@ -27,7 +27,7 @@ Content-Type: application/json
 }
 ###
 POST http://localhost:4000/recipes/post
-Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1QGdtYWlsLmNvbSIsImlkIjoiNjdiYTg0YzliMjNiODBjYTczYmI5YTkxIiwiaWF0IjoxNzQwMjk5MTc1LCJleHAiOjE3NDAzMDI3NzV9.y9JNgyoJDmFnPfzw1SJSQ-5Okz_ONIkD6NAs7dXI2jk
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1QGdtYWlsLmNvbSIsImlkIjoiNjdiYWU3M2IyNGJjZmY3ZDU2ZGFkNDVmIiwiaWF0IjoxNzQwMzAyMjcwLCJleHAiOjE3NDAzMDU4NzB9.gHO4r6V1e7JaG1Ls5LcdEcjuKI7N9loCtnIY5fg71SU
 Content-Type: application/json
 
 {
@@ -40,7 +40,7 @@ Content-Type: application/json
 ###
 GET http://localhost:4000/recipes/getAll
 ###
-PUT http://localhost:4000/recipes/update/67bae1ffb82a03f750e19815
+PUT http://localhost:4000/recipes/update/67bae8dcdce092798bb6e82b
 Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1QGdtYWlsLmNvbSIsImlkIjoiNjdiYTg0YzliMjNiODBjYTczYmI5YTkxIiwiaWF0IjoxNzQwMjk5MTc1LCJleHAiOjE3NDAzMDI3NzV9.y9JNgyoJDmFnPfzw1SJSQ-5Okz_ONIkD6NAs7dXI2jk
 Content-Type: application/json
 
@@ -51,7 +51,7 @@ Content-Type: application/json
 
 }
 ###
-GET http://localhost:4000/recipes/get/67bae1ffb82a03f750e19815
+GET http://localhost:4000/recipes/get/67bae8dcdce092798bb6e82b
 ###
 DELETE http://localhost:4000/recipes/delete/67ba865848078272d539c6c8
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1QGdtYWlsLmNvbSIsImlkIjoiNjdiYTg0YzliMjNiODBjYTczYmI5YTkxIiwiaWF0IjoxNzQwMjc2OTkxLCJleHAiOjE3NDAyODA1OTF9.VwIvi02eOoGudnyLpytbLBbfnRbqQfE8RDRSNvfCCDA

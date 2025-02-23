@@ -1,4 +1,4 @@
-const Recipe = require("../models/recipeModel");
+const FoodRecipe = require("../models/recipeModel");
 
 const createRecipe = async (req, res) => {
   try {
@@ -13,7 +13,7 @@ const createRecipe = async (req, res) => {
       return res.status(400).json({ message: "Missing required fields" });
     }
 
-    const newRecipe = new Recipe({
+    const newRecipe = new FoodRecipe({
       title,
       ingredients,
       instructions,
@@ -36,7 +36,7 @@ const getAllRecipes = async (req, res) => {
   try {
     console.log(`📜 [GET ALL] Request received: ${req.method} `);
 
-    const recipes = await Recipe.find().populate("createdBy", "name email");
+    const recipes = await FoodRecipe.find().populate("createdBy", "name email");
 
     console.log(`✅ Retrieved ${recipes.length} recipes`);
     res.status(200).json(recipes);
@@ -51,7 +51,7 @@ const getRecipeById = async (req, res) => {
     console.log(`🔍 [GET ONE] Request received: ${req.method} ${req.url}`);
     console.log("🆔 Recipe ID:", req.params.id);
 
-    const recipe = await Recipe.findById(req.params.id).populate(
+    const recipe = await FoodRecipe.findById(req.params.id).populate(
       "createdBy",
       "name email"
     );
@@ -75,7 +75,7 @@ const updateRecipe = async (req, res) => {
     console.log("🆔 Recipe ID:", req.params.id);
     console.log("📝 Updated Data:", req.body);
 
-    const updatedRecipe = await Recipe.findByIdAndUpdate(
+    const updatedRecipe = await FoodRecipe.findByIdAndUpdate(
       req.params.id,
       req.body,
       { new: true }
@@ -99,7 +99,7 @@ const deleteRecipe = async (req, res) => {
     console.log(`🗑️ [DELETE] Request received: ${req.method} ${req.url}`);
     console.log("🆔 Recipe ID:", req.params.id);
 
-    const deletedRecipe = await Recipe.findByIdAndDelete(req.params.id);
+    const deletedRecipe = await FoodRecipe.findByIdAndDelete(req.params.id);
 
     if (!deletedRecipe) {
       console.log("⚠️ Recipe not found");

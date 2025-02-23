@@ -1,4 +1,4 @@
-const User = require("../models/userModel");
+const usersData = require("../models/userModel");
 const bcryptjs = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
@@ -14,14 +14,14 @@ const userSignUp = async (req, res) => {
         .json({ message: "Email and Password are required" });
     }
 
-    let user = await User.findOne({ email });
+    let user = await usersData.findOne({ email });
     if (user) {
       console.log("❌ Email already exists:", email);
       return res.status(400).json({ error: "Email already exists" });
     }
 
     const hashedPwd = await bcryptjs.hash(password, 10);
-    const newUser = await User.create({ email, password: hashedPwd });
+    const newUser = await usersData.create({ email, password: hashedPwd });
 
     console.log("✅ User signup successful:", newUser._id);
     res.status(201).json({ message: "Signup successful", user: newUser });
@@ -43,7 +43,7 @@ const userLogin = async (req, res) => {
         .json({ message: "Email and Password are required" });
     }
 
-    let user = await User.findOne({ email });
+    let user = await usersData.findOne({ email });
     if (!user) {
       console.log("❌ User not found:", email);
       return res.status(404).json({ message: "User not found" });
