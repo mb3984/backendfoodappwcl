@@ -14,8 +14,9 @@ Content-Type: application/json
     "password":"madhu12"
 }
 ###
+
 POST http://localhost:4000/recipe/post
-Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1QGdtYWlsLmNvbSIsImlkIjoiNjdiYWYwMWQ2ODM1MDQwYWI5OGFlOGZjIiwiaWF0IjoxNzQwMzA0NDk2LCJleHAiOjE3NDAzMDgwOTZ9.PQxtIP3Cs9dnua8bGH48_eJmp9Uk98qjUAUe77gxOCE
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1QGdtYWlsLmNvbSIsImlkIjoiNjdiYjBiNjg5ZTE5ZjA2MzVjMjYxNWJhIiwiaWF0IjoxNzQwMzEyMzIyLCJleHAiOjE3NDAzMTU5MjJ9.s0ZklsyZ9YWgtYy1H5pAXS6vihKFzcVP5LzEGZaeslA
 Content-Type: application/json
 
 {
@@ -27,7 +28,7 @@ Content-Type: application/json
 }
 ###
 POST http://localhost:4000/recipe/post
-Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1QGdtYWlsLmNvbSIsImlkIjoiNjdiYWYwMWQ2ODM1MDQwYWI5OGFlOGZjIiwiaWF0IjoxNzQwMzA0NDk2LCJleHAiOjE3NDAzMDgwOTZ9.PQxtIP3Cs9dnua8bGH48_eJmp9Uk98qjUAUe77gxOCE
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1QGdtYWlsLmNvbSIsImlkIjoiNjdiYjBiNjg5ZTE5ZjA2MzVjMjYxNWJhIiwiaWF0IjoxNzQwMzEyMzIyLCJleHAiOjE3NDAzMTU5MjJ9.s0ZklsyZ9YWgtYy1H5pAXS6vihKFzcVP5LzEGZaeslA
 Content-Type: application/json
 
 {
@@ -40,18 +41,17 @@ Content-Type: application/json
 ###
 GET http://localhost:4000/recipe/getAll
 ###
-PUT http://localhost:4000/recipe/update/67baf0836835040ab98ae8ff
-Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1QGdtYWlsLmNvbSIsImlkIjoiNjdiYWYwMWQ2ODM1MDQwYWI5OGFlOGZjIiwiaWF0IjoxNzQwMzA0NDk2LCJleHAiOjE3NDAzMDgwOTZ9.PQxtIP3Cs9dnua8bGH48_eJmp9Uk98qjUAUe77gxOCE
+PUT http://localhost:4000/recipe/update/67bb10540fc58c3cbf5d1d0c
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1QGdtYWlsLmNvbSIsImlkIjoiNjdiYjBiNjg5ZTE5ZjA2MzVjMjYxNWJhIiwiaWF0IjoxNzQwMzEyMzIyLCJleHAiOjE3NDAzMTU5MjJ9.s0ZklsyZ9YWgtYy1H5pAXS6vihKFzcVP5LzEGZaeslA
 Content-Type: application/json
 
 {
-    "title":"Mutton Biryani",
-    "ingredients":["Mutton","rice","powder"]
+    "title":"tokkudu laddu"
    
 
 }
 ###
-GET http://localhost:4000/recipe/get/67baf0836835040ab98ae8ff
+GET http://localhost:4000/recipe/get/67bb10540fc58c3cbf5d1d0c
 ###
 DELETE http://localhost:4000/recipes/delete/67ba865848078272d539c6c8
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1QGdtYWlsLmNvbSIsImlkIjoiNjdiYTg0YzliMjNiODBjYTczYmI5YTkxIiwiaWF0IjoxNzQwMjc2OTkxLCJleHAiOjE3NDAyODA1OTF9.VwIvi02eOoGudnyLpytbLBbfnRbqQfE8RDRSNvfCCDA

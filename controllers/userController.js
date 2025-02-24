@@ -22,9 +22,12 @@ const userSignUp = async (req, res) => {
 
     const hashedPwd = await bcryptjs.hash(password, 10);
     const newUser = await usersData.create({ email, password: hashedPwd });
+    let token = jwt.sign({ email, id: newUser._id }, process.env.SECRET_KEY);
 
     console.log("✅ User signup successful:", newUser._id);
-    res.status(201).json({ message: "Signup successful", user: newUser });
+    res
+      .status(201)
+      .json({ message: "Signup successful", user: newUser, token });
   } catch (error) {
     console.error("❌ Error in userSignUp:", error);
     res.status(500).json({ message: "Internal server error" });
